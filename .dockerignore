@@ -1,0 +1,29 @@
+
+# Entorno virtual
+.venv/
+venv/
+
+# Git
+.git/
+.gitignore
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Variables privadas
+.env
+.env.*
+
+# Archivos del editor
+.vscode/
+
+# Documentación y pruebas
+docs/
+tests/
+
+# Archivos temporales
+*.log
+.DS_Store
+Thumbs.db

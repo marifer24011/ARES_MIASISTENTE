@@ -1,0 +1,4 @@
+
+fastapi==0.156.1
+uvicorn
+python-multipart
