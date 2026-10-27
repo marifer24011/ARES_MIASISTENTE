@@ -1,27 +1,21 @@
+from fastapi import FastAPI
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
-from fastapi import FastAPI, Form
-from fastapi.responses import HTMLResponse
+# Inicializar ARES
+app = FastAPI(
+    title="ARES - Mi Asistente",
+    description="Sistema de orientación y seguimiento de trámites escolares",
+    version="1.0.0"
+)
 
-app = FastAPI()
+# Archivos CSS
+app.mount("/css", StaticFiles(directory="frontend/css"), name="css")
 
-@app.get("/", response_class=HTMLResponse)
+# Archivos JavaScript
+app.mount("/js", StaticFiles(directory="frontend/js"), name="js")
+
+# Página principal de Mi Asistente
+@app.get("/")
 def inicio():
-    return """
-    <h1>Hola ARES</h1>
-    <h2>Prueba de Python 🐍</h2>
-
-    <form action="/sumar" method="post">
-        <input type="number" name="a" required>
-        <input type="number" name="b" required>
-        <button type="submit">Sumar</button>
-    </form>
-    """
-
-@app.post("/sumar", response_class=HTMLResponse)
-def sumar(a: int = Form(...), b: int = Form(...)):
-    resultado = a + b
-
-    return f"""
-    <h1>Resultado: {resultado}</h1>
-    <a href="/">Volver</a>
-    """
+    return FileResponse("frontend/index.html")
