@@ -1,5 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Asistente</title>
+</head>
+<body>
+    <form>
+        <h3>Inicie sesión para acceder a su cuenta</h3>
+        <div>
+            <label for="email"></label>
+            <input type="email" id="email" 
+            pattern=".+@zapopan.tecmm.edu.mx" size="30" 
+            placeholder="Correo electrónico" required/>
+        </div>
+<!--Crear login-->
+        <div>
+            <label for="password"></label>
+            <input type="password" id="password" 
+            placeholder="Contraseña" required/>
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+    </form>
 
-<section>
+
+<script src="https://accounts.google.com/gsi/client" async></script>
+
+    <script>
+      function decodeJWT(token) {
+
+        let base64Url = token.split(".")[1];
+        let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+        let jsonPayload = decodeURIComponent(
+          atob(base64)
+            .split("")
+            .map(function (c) {
+              return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+            })
+            .join("")
+        );
+        return JSON.parse(jsonPayload);
+      }
+
+      function handleCredentialResponse(response) {
+
+        console.log("Encoded JWT ID token: " + response.credential);
+
+        const responsePayload = decodeJWT(response.credential);
+
+        console.log("Decoded JWT ID token fields:");
+        console.log("  Full Name: " + responsePayload.name);
+        console.log("  Given Name: " + responsePayload.given_name);
+        console.log("  Family Name: " + responsePayload.family_name);
+        console.log("  Unique ID: " + responsePayload.sub);
+        console.log("  Profile image URL: " + responsePayload.picture);
+        console.log("  Email: " + responsePayload.email);
+      }
+    </script>
+    <!-- g_id_onload contains Google Identity Services settings -->
+    <div
+      id="g_id_onload"
+      data-auto_prompt="false"
+      data-callback="handleCredentialResponse"
+      data-client_id="1042749503975-8igibl21lgsp49n1atcubh232fk7hh06.apps.googleusercontent.com"
+    ></div>
+    <!-- g_id_signin places the button on a page and supports customization -->
+    <div class="g_id_signin"></div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section>
     <h2>Prueba de Python 🐍</h2>
 
     <input type="number" id="numero1" placeholder="Número 1">
@@ -8,6 +91,6 @@
     <button type="button" onclick="hacerSuma()">Sumar</button>
 
     <p id="resultado"></p>
-</section>
+</section> -->
 
-<h1> Hola Ares</h1>
+
