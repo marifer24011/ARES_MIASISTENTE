@@ -1,28 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
+    
 <head>
     <meta charset="UTF-8">
     <title>Mi Asistente</title>
+    <img rel="icon" type="img/logoares.png" href="logoares" >
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+
+    <div class="login-container">
+
+      <img
+        src="img/logotsj.jpg"
+        alt="Tecnológico Superior de Jalisco"
+        class="logo-institucional">
+
     <form>
-        <h3>Inicie sesión para acceder a su cuenta</h3>
-        <div>
+
+        <h3>Bienvenido a Mi Asistente</h3>
+
+        <div class="campo-correo">
+
             <label for="email"></label>
+
+            <img src="img/icon-correo.png" alt="" class="icon-correo">
+
             <input type="email" id="email" 
-            pattern=".+@zapopan.tecmm.edu.mx" size="30" 
-            placeholder="Correo electrónico" required/>
+              pattern=".+@zapopan.tecmm.edu.mx"  
+              placeholder="Correo electrónico" required />
         </div>
+        <br>
+
 <!--Crear login-->
-        <div>
+        <div class="campo-contrasena">
+
             <label for="password"></label>
+
+            <img src="img/icon-contrasena.png" alt="" class="icon-contrasena">
+
             <input type="password" id="password" 
             placeholder="Contraseña" required/>
         </div>
+        <br>
         <button class="iniciar-sesion" type="submit">Iniciar Sesión</button>
+
+
+        
+
     </form>
 
+<!-- Separador entre los botones -->
+<div class="separador">
+  <span>o continúa con</span>
+</div>
 
 <!--Boton Google-->
 <script src="https://accounts.google.com/gsi/client" async></script>
@@ -66,9 +98,19 @@
       data-client_id="1042749503975-8igibl21lgsp49n1atcubh232fk7hh06.apps.googleusercontent.com"
     ></div>
     <!-- g_id_signin places the button on a page and supports customization -->
-    <div class="g_id_signin"></div>
 
+    <div
+      class="g_id_signin"
+      data-type="standard"
+      data-theme="outline"
+      data-size="large"
+      data-text="signin_with"
+      data-shape="rectangular"
+      data-logo_alignment="left"
+      data-width="250">
+    </div>
 
+    </div> <!-- Fin de login-container -->
 
 </body>
 </html>
