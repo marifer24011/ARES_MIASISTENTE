@@ -15,6 +15,9 @@ app.mount("/css", StaticFiles(directory="frontend/css"), name="css")
 # Archivos JavaScript
 app.mount("/js", StaticFiles(directory="frontend/js"), name="js")
 
+# Archivos de imágenes
+app.mount("/img", StaticFiles(directory="frontend/img"), name="img")
+
 # Página principal de Mi Asistente
 @app.get("/")
 def inicio():
