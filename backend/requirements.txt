@@ -2,3 +2,6 @@
 fastapi==0.156.1
 uvicorn
 python-multipart
+PyMySQL
+pwdlib[argon2]
+email-validator
