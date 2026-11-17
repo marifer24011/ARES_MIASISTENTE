@@ -1,11 +1,15 @@
 
 import pymysql
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Response
 from pydantic import BaseModel, EmailStr, Field
 from pwdlib import PasswordHash
 
 from backend.app.database.connection import obtener_conexion
 
+from backend.app.security.sesiones import (
+    generar_token_sesion,
+    guardar_sesion
+)
 
 router = APIRouter(prefix="/usuarios", tags=["Usuarios"])
 password_hash = PasswordHash.recommended()
@@ -79,7 +83,7 @@ class InicioSesion(BaseModel):
 
 
 @router.post("/login")
-def iniciar_sesion(datos: InicioSesion):
+def iniciar_sesion(datos: InicioSesion, response: Response):
     conexion = obtener_conexion()
 
     try:
@@ -119,6 +123,23 @@ def iniciar_sesion(datos: InicioSesion):
             )
 
         conexion.commit()
+
+
+        # Generar y guardar la sesión del estudiante
+        token = generar_token_sesion()
+        guardar_sesion(usuario["id_usuario"], token)
+
+        # Enviar una cookie segura al navegador
+        response.set_cookie(
+            key="ares_sesion",
+            value=token,
+            httponly=True,
+            secure=False,  # Solo para desarrollo local con HTTP
+            samesite="lax",
+            max_age=8 * 60 * 60,
+            path="/"
+        )
+
 
         return {
             "mensaje": "Credenciales verificadas correctamente",

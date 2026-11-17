@@ -1,0 +1,132 @@
+/* Diseño de la página de registro de ARES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Helvetica, sans-serif;
+    background: #edf4ff;
+    display: felx;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.contenedor-registro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tarjeta de registro */
+.tarjeta-registro {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(20, 20, 60, 0.08);
+    text-align: center;
+}
+
+/* Títulos */
+.tarjeta-registro h1 {
+    color: #170b63;
+    font-size: 28px;
+    margin: 0 0 12px;
+}
+
+.tarjeta-registro > p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Formulario */
+#form-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+/* Etiquetas */
+#form-registro label {
+    color: #25254d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Campos */
+#form-registro input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#form-registro input:focus {
+    border-color: #8270bd;
+}
+
+/* Botón de registro */
+#form-registro button {
+    background: #170b63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+#form-registro button:hover {
+    background: #7665ae;
+}
+
+/* Mensajes */
+#mensaje-registro {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+#mensaje-registro.exito {
+    background: #dcfce7;
+    color: #166534;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#mensaje-registro.error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Enlace de inicio de sesión */
+.tarjeta-registro a {
+    color: #170b63;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tarjeta-registro a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 480px) {
+    .tarjeta-registro {
+        padding: 25px 20px;
+    }
+}

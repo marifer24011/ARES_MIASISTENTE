@@ -27,3 +27,8 @@ app.mount("/img", StaticFiles(directory="frontend/img"), name="img")
 @app.get("/")
 def inicio():
     return FileResponse("frontend/index.html")
+
+# Página de registro de estudiantes
+@app.get("/registro.html")
+def pagina_registro():
+    return FileResponse("frontend/registro.html")

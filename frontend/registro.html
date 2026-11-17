@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro | Mi Asistente</title>
+
+    <link rel="stylesheet" href="css/registro.css">
+
+</head>
+
+<body>
+    <main class="contenedor-registro">
+
+        <div class="tarjeta-registro">
+            <h1>Crear cuenta</h1>
+
+            <p>Regístrate para utilizar Mi Asistente</p>
+
+            <form id="form-registro">
+
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="texto"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Nombre completo"
+                    minlength="2"
+                    maxlength="150"
+                    required
+                >
+                <br>
+
+                <label for="correo">Correo Institucional</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="usuario@zapopan.tecmm.edu.mx"
+                    pattern=".+@zapopan\.tecmm\.edu\.mx"
+                    required
+                >
+
+                <br>
+
+                <label for="contrasena">Contraseña</label>
+                <input
+                    type="password"
+                    id="contrasena"
+                    name="contrasena"
+                    placeholder="Mínimo 8 caracteres"
+                    minlength="8"
+                    maxlength="128"
+                    required
+                >
+
+                <button type="submit">
+                    Registrarse
+                </button>
+
+                <p id="mensaje-registro" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <p>
+                ¿Ya tienes cuenta?
+                <a href="/">Iniciar sesión</a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <script src="/js/registro.js"></script>
+
+</body>
+</html>

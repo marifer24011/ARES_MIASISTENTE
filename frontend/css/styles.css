@@ -150,3 +150,24 @@ background-color:  rgba(56, 149, 249, 0.081)/* #392E85;*/
     height: 1px;
     background-color: #D1D5DB;
 }
+
+.mensaje-login {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.mensaje-login.exito {
+    color: #166534;
+    background-color: #dcfce7;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.mensaje-login.error {
+    color: #991b1b;
+    background-color: #fee2e2;
+    padding: 12px;
+    border-radius: 8px;
+}
