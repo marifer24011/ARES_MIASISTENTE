@@ -57,40 +57,52 @@
   <span>o continúa con</span>
 </div>
 
+
+
+
 <!--Boton Google-->
 <script src="https://accounts.google.com/gsi/client" async></script>
 
-    <script>
-      function decodeJWT(token) {
+<script>
+    async function handleCredentialResponse(response) {
+        const mensaje = document.getElementById("mensaje-login");
 
-        let base64Url = token.split(".")[1];
-        let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-        let jsonPayload = decodeURIComponent(
-          atob(base64)
-            .split("")
-            .map(function (c) {
-              return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-            })
-            .join("")
-        );
-        return JSON.parse(jsonPayload);
-      }
+        try {
+            const respuesta = await fetch("/usuarios/google", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    credential: response.credential
+                })
+            });
 
-      function handleCredentialResponse(response) {
+            const datos = await respuesta.json();
 
-        console.log("Encoded JWT ID token: " + response.credential);
+            if (respuesta.ok) {
+                mensaje.textContent = "¡Inicio de sesión con Google exitoso!";
+                mensaje.className = "mensaje-login exito";
 
-        const responsePayload = decodeJWT(response.credential);
+                window.location.href = "/principal.html";
+            } else {
+                mensaje.textContent =
+                    datos.detail || "No se pudo iniciar sesión con Google";
 
-        console.log("Decoded JWT ID token fields:");
-        console.log("  Full Name: " + responsePayload.name);
-        console.log("  Given Name: " + responsePayload.given_name);
-        console.log("  Family Name: " + responsePayload.family_name);
-        console.log("  Unique ID: " + responsePayload.sub);
-        console.log("  Profile image URL: " + responsePayload.picture);
-        console.log("  Email: " + responsePayload.email);
-      }
-    </script>
+                mensaje.className = "mensaje-login error";
+            }
+
+        } catch (error) {
+            console.error("Error al iniciar sesión con Google:", error);
+
+            mensaje.textContent = "No se pudo conectar con el servidor";
+            mensaje.className = "mensaje-login error";
+        }
+    }
+</script>
+
+
+
     <!-- g_id_onload contains Google Identity Services settings -->
     <div
       id="g_id_onload"

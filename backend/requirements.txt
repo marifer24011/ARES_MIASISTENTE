@@ -5,3 +5,5 @@ python-multipart
 PyMySQL
 pwdlib[argon2]
 email-validator
+google-auth
+requests
