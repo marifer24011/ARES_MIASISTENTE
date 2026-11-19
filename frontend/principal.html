@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Asistente</title>
+    <link rel="icon" type="image/png" href="/img/logoares.png" >
+    <link rel="stylesheet" href="css/principal.css">
+    </head>
+
+    <body>
+
+        <!-- ENCABEZADO -->
+        <header class="encabezado">
+
+            <div class="marca"> 
+                <div class="logo-tsj">
+                    <span><img src="img/logotsj.jpg" alt="Logo TSJ"></span>
+                </div>
+
+                <div class="nombre-portal">
+                    <h2>Portal de Estudiantes</h2>
+                    <p>TSJ - Zapopan</p>
+                </div>
+            </div>
+
+            <nav class="menu-principal" aria-label="Navegación principal">
+                <a href="#inicio" class="activo">Inicio</a>
+
+                <div class="usuario">
+                    <div class="icono-usuario" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                        </svg>
+                    </div>
+                    <span id="nombre-usuario">Estudiantes</span>
+                </div>
+            </nav>
+
+            <a href="/" class="salir">Salir</a>
+
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenedor-principal" id="inicio">
+
+                <!-- ASISTENTE ARES -->
+                 <aside class="panel-asistente">
+
+                    <div class="encabezado-asistente">
+
+                        <div class="icono-asistente"> <img src="img/logoares.png" alt="Logo ARES"></div>
+
+                        <div>
+                            <h2>Asistente ARES</h2>
+                            <p>Tu guía en trámites escolares</p>
+                        </div>
+                    </div>
+
+                    <div class="conversacion" id="conversacion">
+
+                        <div class="mensaje bot">
+                            <p>
+                                ¡Hola!
+                                Soy Ares, tu asistente virtual.
+                                Puedo orientarte sobre los trámites
+                                escolares del TSJ - Zapopan.
+                            </p>
+                        </div>
+
+                        <div class="mensaje bot">
+                            <p>
+                                ¿En qué puedo ayudarte hoy?
+                                Escribe tu pregunta.
+                            </p>
+                        </div>
+
+                    </div>
+                    
+                    <form class="formulario-chat" id="form-chat">
+                        <input
+                            type="text"
+                            id="pregunta-chat"
+                            placeholder="Escribe tu pregunta aquí..."
+                            aria-label="Escribe tu pregunta"
+                            required
+                            >
+
+                            <button type="submit" aria-label="Enviar mensaje">
+                                ➤
+                            </button>     
+                    </form>
+
+                 </aside>
+
+                 <!-- ÁREA CENTRAL -->
+                 <section class="contenido">
+
+                    <div class="bienvenida">
+
+                        <div>
+                            <h1>Mi Asistente</h1>
+                            <p>
+                                Orientación, consulta y seguimiento
+                                de trámites escolares del TSJ - Zapopan
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="paneles">
+
+                        <!-- TRÁMITES -->
+                         <section class="panel-tramites" id="tramites">
+
+                            <div class="titulo-seccion">
+                                <h2>Manual de Trámites</h2>
+                                <p>
+                                    Consulta la información de los 
+                                    trámites escolares.
+                                </p>
+                            </div>
+
+                            <!--Manual de tramites-->
+
+                            <div class="catalogo-tramites">
+
+                                <button type="button" class="tarjeta-manual" data-tramite="0">
+                                    <img src="img/ConstanciaEstudios.png" alt="Constancia de estudios">
+                                    <h3>Constancia de estudios</h3>
+                                    <span>Consultar información -> </span>
+                                </button>
+
+                                <button type="button" class="tarjeta-manual" data-tramite="1">
+                                    <img src="img/PagodeSemestre.png" alt="Pago de semestre">
+                                    <h3>Pago de semestre</h3>
+                                    <span>Consultar información -> </span>
+                                </button>
+                            </div>
+
+                            
+
+                         </section>
+
+                <!-- PREGUNTAS FRECUENTES -->
+                 <section class="panel-preguntas" id="preguntas">
+
+                    <div class="titulo-seccion">
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Resuelve tus dudas más comunes.</p>
+                    </div>
+
+                    <div class="lista-preguntas">
+
+                        <details class="pregunta-item">
+                            <summary class="pregunta">¿Qué es una constancia de estudios?</summary>
+                            <div class="respuesta">
+                                    Es un documento oficial que acredita que estás
+                                    inscrito como estudiante en la institución.
+                            </div>
+                        </details>
+
+                        <details class="pregunta-item">
+                            <summary class="pregunta">¿Qué precio tiene?</summary>
+                            <div class="respuesta">
+                                    El costo debe consultarse en la plataforma
+                                    institucional de pagos. Pero a la fecha de 2026
+                                    tiene el costo de $70.00 MXN (Constancia de estudios
+                                    sin calificaciones)
+                            </div>
+                        </details>
+
+                        <details class="pregunta-item">
+                            <summary class="pregunta">¿En qué lugares puedo realizar el pago?</summary>
+                            <div class="respuesta">
+                                    Los pagos se pueden realizar presencialmente
+                                    en una sucursal HSBC de tu preferencia, o bien,
+                                    vía internet por transferencia.
+                            </div>
+                        </details>
+
+                        <details class="pregunta-item">
+                            <summary class="pregunta">¿Puedo pagar por medio de transferencia?</summary>
+                            <div class="respuesta">
+                                    Sí, haciendo el pago a la Cuenta Clabe 
+                                    de la institución.
+                            </div>
+                        </details>
+
+                        <details class="pregunta-item">
+                            <summary class="pregunta">¿Dónde recojo mi documento?</summary>
+                            <div class="respuesta">
+                                    En Control Escolar, ubicado en el 
+                                    edificio de "Básicas" el el 
+                                    segundo piso.
+                            </div>
+                        </details>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Visor del manual-->
+
+        <div class="modal-manual" id="modal-manual"
+            role="dialog" aria-modal="true"
+            aria-labelledby="titulo-manual" hidden>
+
+            <div class="contenido-modal">
+                <button type="button" class="cerrar-manual"
+                    id="cerrar-manual" aria-label="Cerrar manual">
+                    &times;
+                </button>
+
+                <div class="imagen-manual">
+                    <img id="imagen-manual"
+                        src="img/ConstanciaEstudios.png"
+                        alt="Imagen del tramite">
+                </div>
+
+                <div class="informacion-manual">
+                    <h2 id="titulo-manual"></h2>
+                    <p id="descripcion-manual"></p>
+
+                    <h3>Informacion del tramite</h3>
+                    <ul id="pasos-manual"></ul>
+                </div>
+
+                <div class="navegacion-manual">
+                    <button type="button" id="anterior-manual">
+                         ← Atrás
+                    </button>
+
+                    <span id="contador-manual"></span>
+
+                    <button type="button" id="siguiente-manual">
+                        Siguiente →
+                    </button>
+
+                </div>
+
+            </div>
+        
+        </div>
+
+        <script src="js/principal.js"></script>
+        <script src="js/chatbot_ares.js"></script>  
+
+</body>
+</html>

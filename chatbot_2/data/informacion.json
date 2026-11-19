@@ -1,0 +1,63 @@
+{
+    "conversation": [
+        {
+            "text": "Estas en modo de consulta de infromacion de funcionamiento del chat, dime que información necesitas",
+            "in_response_to": null,
+            "persona": "Estudiante",
+            "conversation": "informacion",
+            "tags": ["Informacion"]
+        },
+        {
+            "text": "Soy un asistente virtual que te orienta sobre trámites escolares.",
+            "in_response_to": 
+            [
+            "Qué eres",
+            "Que eres",
+            "con quien hablo?",
+            "quien eres",
+            "como eres",
+            "que sos",
+            "quien eres"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text": "Primero dime que tramites quieres realizar y luego dime tu duda y te intentaré ayudar para dar ",
+            "in_response_to": 
+            [
+            "como fucionas",
+            "¿como funcionas?",
+            "como resuelvo mi duda",
+            "Y que haces?",
+            "¿como te uso?",
+            "¿que te puedo preguntar?",
+            "¿que puede hacer?",
+            "¿que puedes hacer?"]
+            ,
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text": "Puedes nombrar el nombre del tramite que quieres realizar: \"constancia de estudio\", \"certificado UDG\", etc. y yo te dirigire en el tramite",
+            "in_response_to": 
+            [
+            "como selecciono un tramite",
+            "como elijo un tramite",
+            "donde elijo un tramite",
+            "como escojo un tramite",
+            "donde escojo un tramite",
+            "donde puedo seleccionar un tramite",
+            "como se selecciona",
+            "quiero elegir un tramite",
+            "¿como me ayudas?",
+            "¿como me puedes ayudar?"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        }
+    ]
+}

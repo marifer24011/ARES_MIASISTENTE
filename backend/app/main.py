@@ -1,27 +1,44 @@
+from fastapi import FastAPI
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
-from fastapi import FastAPI, Form
-from fastapi.responses import HTMLResponse
+from backend.app.routers.usuarios import router as usuarios_router
 
-app = FastAPI()
+from backend.app.routers.chatbot_ares import router as chatbot_router
 
-@app.get("/", response_class=HTMLResponse)
+# Inicializar ARES
+app = FastAPI(
+    title="ARES - Mi Asistente",
+    description="Sistema de orientación y seguimiento de trámites escolares",
+    version="1.0.0"
+)
+
+# Activar las rutas de usuarios
+app.include_router(usuarios_router)
+
+# Activar las rutas del chatbot de Sergio
+app.include_router(chatbot_router)
+
+# Archivos CSS
+app.mount("/css", StaticFiles(directory="frontend/css"), name="css")
+
+# Archivos JavaScript
+app.mount("/js", StaticFiles(directory="frontend/js"), name="js")
+
+# Archivos de imágenes
+app.mount("/img", StaticFiles(directory="frontend/img"), name="img")
+
+# Página inicio de sesion de Mi Asistente
+@app.get("/")
 def inicio():
-    return """
-    <h1>Hola ARES</h1>
-    <h2>Prueba de Python 🐍</h2>
+    return FileResponse("frontend/index.html")
 
-    <form action="/sumar" method="post">
-        <input type="number" name="a" required>
-        <input type="number" name="b" required>
-        <button type="submit">Sumar</button>
-    </form>
-    """
+# Página de registro de estudiantes
+@app.get("/registro.html")
+def pagina_registro():
+    return FileResponse("frontend/registro.html")
 
-@app.post("/sumar", response_class=HTMLResponse)
-def sumar(a: int = Form(...), b: int = Form(...)):
-    resultado = a + b
-
-    return f"""
-    <h1>Resultado: {resultado}</h1>
-    <a href="/">Volver</a>
-    """
+# Página principal de Mi Asistente
+@app.get("/principal.html")
+def pagina_principal():
+    return FileResponse("frontend/principal.html")

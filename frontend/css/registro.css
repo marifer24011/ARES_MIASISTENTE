@@ -1,0 +1,221 @@
+/* Diseño de la página de registro de ARES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px;
+    background-color: rgba(56, 149, 249, 0.081);
+    font-family: Helvetica, sans-serif;
+}
+
+input,
+button {
+    font-family: inherit;
+}
+
+/* Logotipo institucional */
+.logo-institucional {
+    display: block;
+    width: 130px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Contenedor principal */
+.contenedor-registro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tarjeta de registro */
+.tarjeta-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 480px;
+    max-width: 100%;
+    padding: 25px 45px;
+    background-color: rgba(255, 255, 255, 0.94);
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+/* Título */
+.tarjeta-registro h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #230A78;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+/* Descripción */
+.tarjeta-registro > p {
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 8px 0 14px;
+}
+
+/* Formulario */
+#form-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Etiquetas */
+#form-registro label {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 6px;
+    color: #25254d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Campos */
+#form-registro input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+#form-registro input:focus {
+    border-color: #230A78;
+}
+
+/* Contenedores e iconos agrupados */
+.campo-correo,
+.campo-contrasena,
+.campo-nombre {
+    position: relative;
+    width: 100%;
+}
+
+.icon-correo,
+.icon-contrasena,
+.icon-usuario {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 15px;
+    top: 45px;
+    transform: translateY(-50%);
+    object-fit: contain;
+    pointer-events: none;
+}
+
+#form-registro .campo-correo input,
+#form-registro .campo-contrasena input,
+#form-registro .campo-nombre input {
+    padding-left: 45px;
+}
+
+/* Botón */
+#form-registro button {
+    background-color: #240a7880;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+#form-registro button:hover {
+    background-color: #3814B5;
+}
+
+/* Mensajes */
+#mensaje-registro {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#mensaje-registro.exito {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Quita el espacio cuando el mensaje está vacío */
+#mensaje-registro:empty {
+    display: none;
+}
+
+/* Sube el texto de "¿Ya tienes cuenta?" más cerca del botón */
+.tarjeta-registro > p:last-of-type {
+    font-family: Helvetica, sans-serif;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 14px; 
+    margin-bottom: 0;
+}
+
+/* Enlace para regresar al login */
+
+.tarjeta-registro > p:last-of-type {
+    font-family: Helvetica, sans-serif;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.tarjeta-registro a {
+    color: #230A78;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tarjeta-registro a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    .tarjeta-registro {
+        padding: 25px 20px;
+    }
+}
+
+#form-registro p { 
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #777777;
+}

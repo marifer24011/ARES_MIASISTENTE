@@ -1,5 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Asistente | Inicio Sesión</title>
+    <link rel="icon" type="image/png" href="/img/logoares.png" >
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-<section>
+<body>
+
+    <div class="login-container">
+
+      <img
+        src="img/logotsj.jpg"
+        alt="Tecnológico Superior de Jalisco"
+        class="logo-institucional">
+
+    <form id="form-login">
+
+        <h3>Bienvenido a Mi Asistente</h3>
+
+        <div class="campo-correo">
+
+            <label for="email"></label>
+
+            <img src="img/icon-correo.png" alt="" class="icon-correo">
+
+            <input type="email" id="email" 
+              pattern=".+@zapopan.tecmm.edu.mx"  
+              placeholder="Correo electrónico" required />
+        </div>
+        <br>
+
+<!--Crear login-->
+        <div class="campo-contrasena">
+
+            <label for="password"></label>
+
+            <img src="img/icon-contrasena.png" alt="" class="icon-contrasena">
+
+            <input type="password" id="password" 
+            placeholder="Contraseña" required/>
+        </div>
+        <br>
+        <button class="iniciar-sesion" type="submit">Iniciar Sesión</button>
+
+
+        <p id="mensaje-login" class="mensaje-login" role="status" aria-live="polite"></p>
+
+    </form>
+
+<!-- Separador entre los botones -->
+<div class="separador">
+  <span>o continúa con</span>
+</div>
+
+
+
+
+<!--Boton Google-->
+<script src="https://accounts.google.com/gsi/client" async></script>
+
+<script>
+    async function handleCredentialResponse(response) {
+        const mensaje = document.getElementById("mensaje-login");
+
+        try {
+            const respuesta = await fetch("/usuarios/google", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    credential: response.credential
+                })
+            });
+
+            const datos = await respuesta.json();
+
+            if (respuesta.ok) {
+                mensaje.textContent = "¡Inicio de sesión con Google exitoso!";
+                mensaje.className = "mensaje-login exito";
+
+                window.location.href = "/principal.html";
+            } else {
+                mensaje.textContent =
+                    datos.detail || "No se pudo iniciar sesión con Google";
+
+                mensaje.className = "mensaje-login error";
+            }
+
+        } catch (error) {
+            console.error("Error al iniciar sesión con Google:", error);
+
+            mensaje.textContent = "No se pudo conectar con el servidor";
+            mensaje.className = "mensaje-login error";
+        }
+    }
+</script>
+
+
+
+    <!-- g_id_onload contains Google Identity Services settings -->
+    <div
+      id="g_id_onload"
+      data-auto_prompt="false"
+      data-callback="handleCredentialResponse"
+      data-client_id="1042749503975-8igibl21lgsp49n1atcubh232fk7hh06.apps.googleusercontent.com"
+    ></div>
+    <!-- g_id_signin places the button on a page and supports customization -->
+
+    <div
+      class="g_id_signin"
+      data-type="standard"
+      data-theme="outline"
+      data-size="large"
+      data-text="signin_with"
+      data-shape="rectangular"
+      data-logo_alignment="left"
+      data-width="250">
+    </div>
+
+    <p>¿No tienes cuenta? <a href="/registro.html">Crea una</a> </p>
+
+    </div> <!-- Fin de login-container -->
+
+    <script src="/js/login.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section>
     <h2>Prueba de Python 🐍</h2>
 
     <input type="number" id="numero1" placeholder="Número 1">
@@ -8,6 +151,6 @@
     <button type="button" onclick="hacerSuma()">Sumar</button>
 
     <p id="resultado"></p>
-</section>
+</section> -->
 
-<h1> Hola Ares</h1>
+
