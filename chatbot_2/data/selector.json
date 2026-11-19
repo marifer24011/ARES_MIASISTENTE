@@ -1,0 +1,11 @@
+{
+    "conversation": [
+        {
+            "text": "haz cambiado de tramite",
+            "in_response_to": true,
+            "persona": "Estudiante",
+            "conversation": "selector",
+            "tags": ["selector"]
+        }
+    ]
+}

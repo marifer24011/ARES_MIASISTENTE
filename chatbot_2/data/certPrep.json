@@ -1,0 +1,140 @@
+{
+    "conversation": [
+        {
+            "text": "Estas en modo consulta sobre el tramite de entrega de cerficiado de estudios de preparatoria",
+            "in_response_to": null,
+            "persona": "Estudiante",
+            "conversation": "informacion",
+            "tags": ["Informacion"]
+        },
+        {
+            "text": "¡Claro! dime con qué duda referente a los certificados de estudios te puedo ayudar", 
+            "in_response_to": ["me ayudas a tramitar mi contancia",
+            "certificado",
+            "UDG",
+            "preparatoria",
+            "que certificado de estudios de preparatoria",
+            "me ayudas con mi tramtie de certificado de estudios",
+            "certificado de estudios",
+            "certificado UDG",
+            "certificado de estudios de la UDG",
+            "ayudame con mi certificado",
+            "ayudame con mi certificado de estudios"         
+        ],
+            "persona": "ares",
+            "conversation": "constancia",
+            "tags": ["Constancia"]
+        },
+        {
+            "text": " el certificado acredita formalmente los estudios concluidos en los estudios de preaparatoria",
+            "in_response_to": 
+            [
+            "que es",
+            "que es un certificado",
+            "que es un certificado de estudios",
+            "que es un certificado de conclusion de estudios",
+            "cual documento es",
+            "que tipo de documento es",
+            "como es",
+            "como se ve"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text": "Al venir de la UDG El TecSJ Zapopan solicita certificado de bachillerato o, si aún no lo tienes, constancia original que indique el avance de créditos",
+            "in_response_to": 
+            [
+            "Que documento entrego si vengo de UDG",
+            "y si vengo de UDG",
+            "que docuemento entrego de UDG",
+            "que certificado debo entregar",
+            "que documento de UDG entrego",
+            "documento UDG"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text":"En Control Escolar de tu barchilerato o preparatoria",
+            "in_response_to": 
+            [
+            "donde consigo mi certificado",
+            "quien me da mi certificado",
+            "donde me dan ese documento",
+            "donde me la dan",
+            "quien me la da",
+            "quien la entrega",
+            "donde voy",
+            "a donde voy",
+            "con quien voy",
+            "donde tramito",
+            "donde lo obtengo",
+            "donde",
+            "con quien"
+
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text": "No, el kardex no sustuye al certificado entrega el ceritifado ",
+            "in_response_to": 
+            [
+            "y si entrego el kardex",
+            "y si mejor kardex",
+            "y el kardex",
+            "kardex se puede",
+            "puedo entregar karder",
+            "el kardex es valido",
+            "se puede kardex",
+            "puedo entregar el kardex",
+            "el kardex es valido",
+            "se puede kardex"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text": "No, el kardex no sustuye al certificado entrega el ceritifado ",
+            "in_response_to": 
+            [
+            "y si entrego el kardex",
+            "y si mejor kardex",
+            "y el kardex",
+            "kardex se puede",
+            "puedo entregar karder",
+            "el kardex es valido",
+            "se puede kardex",
+            "puedo entregar el kardex",
+            "el kardex es valido",
+            "se puede kardex"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text": "la constancia de estudios y certificado de estudios son diferentes, el certificado acredita formalmente los estudios concluidos mientras que la constancia acredita la informacion academica indicada",
+            "in_response_to": 
+            [
+            "y si entre constancia de estudios",
+            "la constancia de estudios vale",
+            "diferencia entre constancia de estudios",
+            "diferencia entre certificado y consancia",
+            "diferenica entre constancia y certificado",
+            "constancia y certificado",
+            "certificado y constancia",
+            "certificado o constancia",
+            "const"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        }
+    ]
+}

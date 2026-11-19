@@ -1,0 +1,99 @@
+{
+    "conversation": [
+        {
+            "text": "Estas en modo de consulta de constancias de estudios, dime que información necesitas",
+            "in_response_to": null,
+            "persona": "Estudiante",
+            "conversation": "constancia",
+            "tags": ["Constancia"]
+        },
+        {
+            "text": "¡Claro! dime con qué duda referente a las constancias de estudio te puedo ayudar", 
+            "in_response_to": ["me ayudas a tramitar mi contancia",
+            "Quiero una contancia de estudios",
+            "constancia",
+            "consultar constancia de estuios",
+            "contancia",
+            "contancia con calificaciones",
+            "contstancia sin calificaciones",
+            "tengo una duda con mi contancia de estudios",
+            "necesito ayuda con mi contancia de estudios",
+            "constancia ayuda",
+            "con mi tramite de constancia de estudio",
+            "con mi constancia de estudio",
+            "ayudame con mi constancia",
+            "con mi constancia"           
+        ],
+            "persona": "ares",
+            "conversation": "constancia",
+            "tags": ["Constancia"]
+        },
+        {
+            "text": "La constancia de estudios es un documento el cual valida a la persona como estudiante del Instituto Tecnológico Superior Útil para diversos trámites, como inscripciones, becas, y otros procesos administrativos", 
+            "in_response_to": ["Que es una constancia",
+            "Para que me sirve",
+            "que es es",
+            "constancia",
+            "contancia",
+            "Que es una constancia",
+            "Que es una constancia de estudios",
+            "Para que sirve una constancia de estudios",
+            "Que es una constancia de estudios y para que sirve",
+            "Que es constancia",
+            "Para que sirve constancia",
+            "Que es constancia de estudios",
+            "Q s constancia",
+            "quiero tramitar mi constancia",
+            "tengo una duda con mi constancia",
+            "tengo una duda sobre mi constancia de estudios"
+        ],
+            "persona": "ares",
+            "conversation": "constancia",
+            "tags": ["Constancia"]
+        },
+        {
+            "text": "Ve a la pestaña \"pagos\" y en el apartado de \"Servicio\" selecciona o bien \"contancia de estudios con calificaciones\" o \"constancia de estudios sin calificaciones\" añade en el apartado \"Concepto\" Pago + tipo de contancia por ejemplo \"Pago constancia de estudios con calificaciones\" despues da click en el boton de \"Genera ficha de pago\" y realiza tu pago por el medio de preferencia",
+            "in_response_to": ["¿como puedo tramitar mi constancia?",
+            "¿por donde empiezo?",
+            "donde la tramito?",
+            "donde la tramitá?",
+            "¿Que hago?",
+            "¿Como hago para tramitar mi constancia?",
+            "¿Como puedo tramitar mi constancia?",
+            "¿Donde hago el trámite?",
+            "¿Que hago?",
+            "que hago?",
+            "¿Que hago para tramitar mi constancia?",
+            "como le haces?",
+            "¿como le hago?",
+            "¿Donde lo hago?",
+            "Como lo hago",
+            "como saco mi contancia",
+            "¿como se tramita?",
+            "donde la tramito",
+            "donde debo tramitirla",
+            "donde debo tramitarla",
+            "necesito una constancia",
+            "donde",
+            "quiero saber como consutlar mi contancia"
+        ],
+            "persona": "ares",
+            "conversation": "constancia",
+            "tags": ["Constancia"]
+        },
+        {
+            "text": "Segundo nivel de ciencias basicas, a mano derecha, en cualquiera de las dos ventanillas de control escolar",
+            "in_response_to": ["Donde me la entregan",
+            "donde la recojo",
+            "donde me la dan",
+            "donde la obtengo",
+            "en que edificio es",
+            "cual edifico",
+            "donde la recibo"
+        ],
+            "persona": "ares",
+            "conversation": "constancia",
+            "tags": ["Constancia"]
+        }
+    ]
+}

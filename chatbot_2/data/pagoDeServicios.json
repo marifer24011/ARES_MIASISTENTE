@@ -1,0 +1,88 @@
+{
+    "conversation": [
+        {
+            "text": "Estas en modo consulta sobre el tramite de entrega de cerficiado de estudios de preparatoria",
+            "in_response_to": null,
+            "persona": "Estudiante",
+            "conversation": "informacion",
+            "tags": ["Informacion"]
+        },
+        
+        {
+            "text": "unas semanas antes del comienzo del ciclo escolar debe realizarlos los pagos, la puedes visualizar desde los medios oficiales: https://www.facebook.com/TSJZapopan/?locale=es_LA",
+            "in_response_to": 
+            [
+            "Cuando tengo que realizar el pago",
+            "Cada cuando pago",
+            "cuando pago",
+            "cuando hago el pago",
+            "reeinscripcion",
+            "cuando me reeinscribo",
+            "en que momento pago",
+            "en que momento me reeeinscribo"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text": "El costo de la reeinscripcion puede variar, pero el mismo se suele dar a conocer tanto el baucher de pago que se generá desde \"Pagos\" o en los medios oficiales:  https://www.facebook.com/TSJZapopan/?locale=es_LA",
+            "in_response_to": 
+            [
+            "¿Cuanto tengo que pagar?",
+            "cuanto pago",
+            "cuanto cuesta",
+            "cuanro cuesta la reescripcion",
+            "cuanto cuesta el pago de reescripcion",
+            "cuanto debo",
+            "que debo",
+            "cuanto"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text": "Ve a la pestaña \"pagos\" y en el apartado de \"Servicio\" selecciona o bien \"APORTACIÓN PARA DESARROLLO DE INFRAESTRUCTURA Y EQUIPAMIENTO DE INGENIERÍAS Y LICENCIATURA\" añade en el apartado \"Concepto\" MesActual + AñoActual (ejemplo: \"Enero 2026\") despues da click en el boton de \"Genera ficha de pago\" y realiza tu pago por el medio de preferencia",
+            "in_response_to": 
+            [
+            "¿como pago?",
+            "como genero el baucher",
+            "ficha de pago",
+            "como hago el pago",
+            "como hago el baucher",
+            "como le hago",
+            "que hago",
+            "done lo hago",
+            "y ahora",
+            "donde",
+            "a donde",
+            "donde tramito",
+            "en donde"
+
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        },
+        {
+            "text": "Puedes realizar el pago tanto por ventanilla o praticaja/Cajero multiples del banco HSBC, por medio de TELECOM o por transferencia SPEI las mismas quedan relfejadas en el ticket de pago",
+            "in_response_to": 
+            [
+            "en que bancos puedo pagar",
+            "donde lo pago",
+            "como lo pago",
+            "por donde lo pago",
+            "en que banco lo pago",
+            "bancos",
+            "metodo de pago",
+            "maneras de pago",
+            "como se paga",
+            "en cuales se acepta"
+            ],
+            "persona": "ares",
+            "conversation": "informacion",
+            "tags": ["informacion"]
+        }
+    ]
+}

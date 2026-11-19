@@ -1,0 +1,126 @@
+{
+    "modulos": {
+        "saludos": {
+            "archivo": "saludos.json",
+            "base_datos": "saludos.sqlite3"
+        },
+        "selector": {
+            "archivo": "selector.json",
+            "base_datos": "selector.sqlite3"
+        },
+        "constancia": {
+            "archivo": "constancia.json",
+            "base_datos": "constancia.sqlite3"
+        },
+        "informacion": {
+            "archivo": "informacion.json",
+            "base_datos": "informacion.sqlite3"
+        },
+        "certPrep": {
+            "archivo": "certPrep.json",
+            "base_datos": "certPrep.sqlite3"
+        },
+        "pagoDeServicios": {
+            "archivo": "pagoDeServicios.json",
+            "base_datos": "pagoDeServicios.sqlite3"
+        }
+    },
+    "modulos_permanentes": [
+        "saludos"
+    ],
+    "modulos_iniciales": [
+        "selector"
+    ],
+    "transiciones": [
+        {
+            "frases": [
+                "constancia",
+                "constancia de estudio",
+                "constancias de estudio",
+                "consultar constancia de estudio",
+                "consulta de constancias de estudio",
+                "como puedo consultar mi constancia",
+                "contancia",
+                "contancias con calificaciones",
+                "constancias sin calificaciones",
+                "quero saber como tramitar mi constancia",
+                "quiero tramitar mi constancia",
+                "tengo una duda con mi contancia",
+                "tengo una duda sobre mi constancia de estudios",
+                "quiero saber como tramitar mi constancia de estudios"
+            ],
+            "modulos": [
+                "constancia"
+            ],
+            "momento": "antes"
+        },
+        {
+            "frases": [
+                "como funcionas",
+                "que eres",
+                "quien eres",
+                "como te uso",
+                "que te puedo preguntar",
+                "que puede hacer",
+                "que puedes hacer",
+                "que puedes hacer por mi",
+                "que haces",
+                "como me ayudas"
+            ],
+            "modulos": [
+                "informacion"
+            ],
+            "momento": "antes"
+        },
+        {
+            "frases": [
+                "certificado de estudios de UDG",
+                "certificado de UDG",
+                "certificado",
+                "UDG",
+                "certificado de estudidos",
+                "certificado de estudios UDG",
+                "certificado de preparatoria",
+                "preparatoria",
+                "certificado de estudios de preparatora",
+                "que certificado de estudios entrego",
+                "como entrego mi certificado de estudios",
+                "como entrego mi certificado"
+            ],
+            "modulos": [
+                "certPrep"
+            ],
+            "momento": "antes"
+        },
+        {
+            "frases": [
+                "cambiar tramite",
+                "elgir otro tramite",
+                "otro tramite",
+                "otro tramite por favor",
+                "quiero otro tramite",
+                "cambiar el tramite",
+                "cambiar"
+            ],
+            "modulos": [
+                "selector"
+            ],
+            "momento": "antes"
+        },
+        {
+            "frases": [
+                "reeiscripcion",
+                "pago de reeinscripcion",
+                "inscripcion",
+                "como me reeinscribo",
+                "pago de servicios",
+                "pago de servicios escolares",
+                "costo de reeinscripcion"
+            ],
+            "modulos": [
+                "pagoDeServicios"
+            ],
+            "momento": "antes"
+        }
+    ]
+}

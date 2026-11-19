@@ -1,0 +1,89 @@
+{
+    "conversation": [
+        {
+            "text": "Hola, soy ARES. ¿Cómo puedo ayudarte?",
+            "in_response_to": ["hola", 
+            "buenas tardes",
+            "Saludos",
+            "buenos dias",
+            "buenas noches",
+            "buenas",
+            "Hooooola",
+            "holaaa",
+            "holaa",
+            "¿Que tal?",
+            "hola...",
+            "buenas tardes",
+            "homo estas",
+            "ola",
+            "hoal",
+            "oal",
+            "alo",
+            "ol"
+        ],
+            "persona": "ares",
+            "conversation": "saludos",
+            "tags": ["saludos"]
+        },
+        {
+            "text": "¡Bien! ¿Cómo puedo ayudarte?",
+            "in_response_to": 
+            ["¿como estas?",
+            "¿como te sientes?",
+            "¿como te va?",
+            "¿como te encuentras?",
+            "¿como te va?",
+            "¿como has estado?",
+            "¿como te ha ido?"
+            ],
+            "persona": "ares",
+            "conversation": "saludos",
+            "tags": ["saludos"]
+        },
+                {
+            "text": "¡Claro! ¿en que te puedo ayudar?",
+            "in_response_to": 
+            ["me puedes ayudar",
+            "me puedes ayudar?",
+            "¿ayuda?",
+            "ayuda",
+            "ayuda?",
+            "necesito ayuda",
+            "me ayudas",
+            "apoyo",
+            "me apoyas",
+            "AYUDA",
+            "asistencia",
+            "me asistes",
+            "ayudame",
+            "tengo una pregunta",
+            "una duda",
+            "una pregunta",
+            "tengo una duda",
+            "duda"
+            ],
+            "persona": "ares",
+            "conversation": "saludos",
+            "tags": ["saludos"]
+        },
+        {
+            "text": "¡Hasta pronto! Ha sido un gusto ayudarte.",
+            "in_response_to": ["adios", 
+            "hasta luego",
+            "nos vemos",
+            "chau",
+            "chao",
+            "Ciao",
+            "Goodbye",
+            "Bye",
+            "adios",
+            "hasta la proxima",
+            "nos vemos luego",
+            "nos vemos pronto"
+],
+            "persona": "ares",
+            "conversation": "saludos",
+            "tags": ["despedidas"]
+        }
+    ]
+}

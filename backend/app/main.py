@@ -4,6 +4,8 @@ from fastapi.staticfiles import StaticFiles
 
 from backend.app.routers.usuarios import router as usuarios_router
 
+from backend.app.routers.chatbot_ares import router as chatbot_router
+
 # Inicializar ARES
 app = FastAPI(
     title="ARES - Mi Asistente",
@@ -13,6 +15,9 @@ app = FastAPI(
 
 # Activar las rutas de usuarios
 app.include_router(usuarios_router)
+
+# Activar las rutas del chatbot de Sergio
+app.include_router(chatbot_router)
 
 # Archivos CSS
 app.mount("/css", StaticFiles(directory="frontend/css"), name="css")
