@@ -23,7 +23,7 @@ app.mount("/js", StaticFiles(directory="frontend/js"), name="js")
 # Archivos de imágenes
 app.mount("/img", StaticFiles(directory="frontend/img"), name="img")
 
-# Página principal de Mi Asistente
+# Página inicio de sesion de Mi Asistente
 @app.get("/")
 def inicio():
     return FileResponse("frontend/index.html")
@@ -32,3 +32,8 @@ def inicio():
 @app.get("/registro.html")
 def pagina_registro():
     return FileResponse("frontend/registro.html")
+
+# Página principal de Mi Asistente
+@app.get("/principal.html")
+def pagina_principal():
+    return FileResponse("frontend/principal.html")

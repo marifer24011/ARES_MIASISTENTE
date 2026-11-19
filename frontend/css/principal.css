@@ -1,0 +1,391 @@
+/* ===== ESTILOS GENERALES ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    color: #171344;
+    background: #f7f5ff;
+
+}
+
+/* ===== ENCABEZADO ===== */
+
+.encabezado {
+    min-height: 90px;
+    padding: 16px 28px;
+    background: linear-gradient(110deg, #35118d, #220b65);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo-ares {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nombre-portal {
+    border-left: 1px solid #ffffff80;
+    padding-left: 18px;
+}
+
+.nombre-portal h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.nombre-portal p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu-principal a {
+    padding: 13px 18px;
+    border-radius: 12px;
+    color:white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu-principal a:hover,
+.menu-principal a.activo {
+    background: #8241dc;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.salir {
+    color: white;
+    text-decoration: none;
+}
+
+/* ===== DISTRIBUCIÓN PRINCIPAL ===== */
+ 
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 390px minmax(0,1fr);
+    gap: 22px;
+    padding: 24px;
+    min-height: calc(100vh - 90px);
+}
+
+/* ===== ASISTENTE ===== */
+
+.panel-asistente {
+    display: flex;
+    flex-direction: column;
+    min-height: 650px;
+    max-height: calc(100vh - 138px);
+    background: white;
+    border: 1px solid #e3ddf7;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px #26116b0d;
+}
+
+.encabezado-asistente {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px;
+    border-bottom: 1px solid #eeeafa;
+}
+
+.icono-asistente {
+    background: #40149d;
+    color: white;
+    border-radius: 16px;
+    padding: 14px;
+    font-size: 30px;
+}
+
+.encabezado-asistente h2 {
+    margin: 0 0 7px;
+    font-size: 22px;
+}
+
+.encabezado-asistente p {
+    margin: 0;
+    color: #666487;
+    font-size: 14px;
+}
+
+.conversacion {
+    flex: 1;
+    overflow-y: auto;
+    padding: 22px 16px;
+}
+
+.mensaje {
+    max-width: 88%;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 20px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.mensaje p {
+    margin: 0;
+}
+
+.mensaje.bot {
+    background: #f1edff;
+    border-bottom-left-radius: 5px;
+}
+
+.mensaje.estudiante {
+    background: #e3d2ff;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.formulario-chat {
+    display: flex;
+    gap: 8px;
+    padding: 14px;
+    border-top: 1px solid #eeeafa;
+}
+
+.formulario-chat input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #ded8ed;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.formulario-chat button {
+    background: #4b19ad;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 18px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ===== CONTENIDO DERECHO ===== */
+.contenido {
+    min-width: 0;
+}
+
+.bienvenida {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 8px 28px;
+}
+
+.bienvenida h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    color: #160d56;
+}
+
+.bienvenida p {
+    margin: 0;
+    color: #666487;
+    line-height: 1.5;
+}
+
+.boton-manual {
+    background: #eee5ff;
+    color: #42149c;
+    padding: 16px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ===== PANELES ===== */
+
+.paneles {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 18px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.panel-tramites,
+.panel-preguntas {
+    background: white;
+    border: 1px solid #e3ddf7;
+    border-radius: 22px;
+    padding: 22px;
+    min-height: 490px;
+}
+
+.titulo-seccion h2 {
+    font-size: 23px;
+    margin: 0 0 10px;
+    color: #160d56;
+}
+
+.titulo-seccion p {
+    color: #666487;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ===== TARJETA DEL TRÁMITE ===== */
+.tarjeta-tramite {
+    position: relative;
+    margin-top: 50px;
+    padding: 30px 24px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f5f0ff, #e9dcff);
+}
+
+.etiqueta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #8740dc;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 0 18px 0 14px;
+    font-size: 12px;
+}
+
+.icono-tramite {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-tramite h3 {
+    color: #170d55;
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+.tarjeta-tramite p {
+    color: #615d84;
+    line-height: 1.6;
+}
+
+.boton-tramite {
+    margin-top: 14px;
+    padding: 13px 18px;
+    background: #4815a5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.boton-tramite:hover {
+    background: #7130c6;
+}
+
+/* ===== PREGUNTAS FRECUENTES ===== */
+
+.lista-preguntas {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pregunta {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #e3ddf7;
+    background: #fbfaff;
+    color: #20164f;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.pregunta:hover {
+    background: #f0e8ff;
+    border-color: #b9a2ed;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1250px) {
+    .contenedor-principal {
+        grid-template-columns: 330px minmax(0, 1fr);
+    }
+
+    .panel-tramites,
+    .panel-preguntas {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .encabezado {
+        flex-wrap: wrap;
+    }
+
+    .menu-principal {
+        flex-wrap: wrap;
+    }
+
+    .contenedor-principal {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-asistente {
+        min-height: 450px;
+        max-height: 600px;
+    }
+
+    .bienvenida {
+        flex-wrap: wrap;
+    }
+
+    .paneles {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-principal {
+        padding: 12px;
+    }
+
+    .encabezado {
+        padding: 16px;
+    }
+
+    .panel-tramites,
+    .panel-preguntas {
+        padding: 16px;
+    }
+
+    .bienvenida h1 {
+        font-size: 28px;
+    }
+}

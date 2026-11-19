@@ -32,6 +32,7 @@ formulario.addEventListener("submit", async function (evento) {
                 datos.usuario.nombre + "!";
 
             mensaje.className = "mensaje-login exito";
+            window.location.href = "/principal.html"
         } else {
             mensaje.textContent =
                 datos.detail || "No se pudo iniciar sesión";

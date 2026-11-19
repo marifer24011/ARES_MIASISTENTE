@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Mi Asistente</title>
+
+        <link rel="stylesheet" href="css/principal.css">
+    </head>
+
+    <body>
+
+        <!-- ENCABEZADO -->
+        <header class="encabezado">
+
+            <div class="marca"> 
+                <div class="logo-ares">
+                    <span>ARES</span>
+            </div>
+
+            <div class="nombre-portal">
+                <h2>Portal de Estudiantes</h2>
+                <p>TSJ - Zapopan</p>
+            </div>
+        </div>
+
+        <nav class="menu-principal" aria-label="Navegación principal">
+            <a href="#inicio" class="activo">Inicio</a>
+            <a href="#tramites">Trámites</a>
+            <a href="#preguntas">Preguntas frecuentes</a>
+        </nav>
+
+        <div class="usuario">
+            <span>Estudiantes</span>
+            <a href="/" class="salir">Salir</a>
+        </div>
+
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenedor-principal" id="inicio">
+
+                <!-- ASISTENTE ARES -->
+                 <aside class="panel-asistente">
+
+                    <div class="encabezado-asistente">
+                        <div class="icono-asistente">🤖</div>
+
+                        <div>
+                            <h2>Asistente ARES</h2>
+                            <p>Tu guía en trámites escolares</p>
+                        </div>
+                    </div>
+
+                    <div class="conversacion" id="conversacion">
+
+                        <div class="mensaje bot">
+                            <p>
+                                ¡Hola!
+                                Soy Ares, tu asistente virtual.
+                                Puedo orientarte sobre los trámites
+                                escolares del TSJ - Zapopan.
+                            </p>
+                        </div>
+
+                        <div class="mensaje bot">
+                            <p>
+                                ¿En qué puedo ayudarte hoy?
+                                Seleciona una opción o escribe tu pregunta.
+                            </p>
+                        </div>
+
+                    </div>
+                    
+                    <form class="formulario-chat" id="form-chat">
+                        <input
+                            type="text"
+                            id="pregunta-chat"
+                            placeholder="Escribe tu pregunta aquí..."
+                            aria-label="Escribe tu pregunta"
+                            required
+                            >
+
+                            <button type="submit" aria-label="Enviar mensaje">
+                                ➤
+                            </button>     
+                    </form>
+
+                 </aside>
+
+                 <!-- ÁREA CENTRAL -->
+                 <section class="contenido">
+
+                    <div class="bienvenida">
+
+                        <div>
+                            <h1>Mi Asistente</h1>
+                            <p>
+                                Orientación, consulta y seguimiento
+                                de trámites escolares del TSJ - Zapopan
+                            </p>
+                        </div>
+
+                        <a href="#manual" class="boton-manual">
+                            Manual de uso
+                        </a>
+
+                    </div>
+
+                    <div class="paneles">
+
+                        <!-- TRÁMITES -->
+                         <section class="panel-tramites" id="tramites">
+
+                            <div class="titulo-seccion">
+                                <h2>Trámites disponibles</h2>
+                                <p>
+                                    Consulta la información de los 
+                                    trámites escolares.
+                                </p>
+                            </div>
+
+                            <article class="tarjeta-tramite">
+                                <span class="etiqueta">
+                                    Trámite piloto
+                                </span>
+
+                                <div class="icono-tramite">📁</div>
+
+                                <h3>
+                                    Integración del expediente escolar
+                                    de nuevo ingreso
+                                </h3>
+
+                                <p>
+                                    Conoce los requisitos, documentación
+                                    y pasos para completar tu expediente escolar.
+                                </p>
+
+                                <button
+                                    type="button"
+                                    class="boton-tramite"
+                                    id="ver-tramite"
+                                    >
+                                    Consultar trámite →
+                                </button>
+
+                            </article>
+
+                         </section>
+
+                <!-- PREGUNTAS FRECUENTES -->
+                 <section class="panel-preguntas" id="preguntas">
+
+                    <div class="titulo-seccion">
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Resuelve tus dudas más comunes.</p>
+                    </div>
+
+                    <div class="lista-preguntas">
+                        <button type="button" class="pregunta">
+                            ¿Qué es el expediente escolar?
+                        </button>
+
+                        <button type="button" class="pregunta">
+                            ¿Qué requisitos necesito?
+                        </button>
+
+                        <button type="button" class="pregunta">
+                            ¿Dónde entrego mi documentación?
+                        </button>
+
+                        <button type="button" class="pregunta">
+                            ¿Cuánto tiempo tarda el trámite?
+                        </button>
+
+                        <button type="button" class="pregunta">
+                            ¿A quién puedo acudir si tengo dudas?
+                        </button>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <script src="js/principal.js"></script>
+
+</body>
+</html>

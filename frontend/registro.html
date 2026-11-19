@@ -3,57 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Registro | Mi Asistente</title>
-
-    <link rel="stylesheet" href="css/registro.css">
+    <title>Mi Asistente | Registro</title>
+    <link rel="icon" type="image/png" href="/img/logoares.png" >
+     <link rel="stylesheet" href="css/registro.css"> 
 
 </head>
 
 <body>
+
     <main class="contenedor-registro">
 
         <div class="tarjeta-registro">
-            <h1>Crear cuenta</h1>
 
-            <p>Regístrate para utilizar Mi Asistente</p>
+            <img 
+                src="img/logotsj.jpg"
+                alt="Tecnologico Superior de Jalisco"
+                class="logo-institucional">
+
+            <h3>Crear cuenta</h3>
+
+        
 
             <form id="form-registro">
 
-                <label for="nombre">Nombre completo</label>
-                <input
-                    type="texto"
-                    id="nombre"
-                    name="nombre"
-                    placeholder="Nombre completo"
-                    minlength="2"
-                    maxlength="150"
-                    required
-                >
-                <br>
+                <!-- Nombre Completo -->
+                <div class="campo-nombre">
+                    <label for="nombre">Nombre Completo</label>
+                    <img src="img/icon-usuario.png" alt="" class="icon-usuario">
+                    <input type="text" id="nombre" name="nombre"
+                        placeholder="Usuario"
+                        minlength="2" maxlength="150" required />
+                </div>
 
-                <label for="correo">Correo Institucional</label>
-                <input
-                    type="email"
-                    id="correo"
-                    name="correo"
-                    placeholder="usuario@zapopan.tecmm.edu.mx"
-                    pattern=".+@zapopan\.tecmm\.edu\.mx"
-                    required
-                >
+                <!-- Correo electronico -->
+                <div class="campo-correo">
+                    <label for="correo">Correo Institucional</label>
+                    <img src="img/icon-correo.png" alt="" class="icon-correo">
+                    <input type="email" id="correo" name="correo"
+                        pattern=".+@zapopan.tecmm.edu.mx"  
+                        placeholder="usuario@zapopan.tecmm.edu.mx" required />
+                </div>
 
-                <br>
-
-                <label for="contrasena">Contraseña</label>
-                <input
-                    type="password"
-                    id="contrasena"
-                    name="contrasena"
-                    placeholder="Mínimo 8 caracteres"
-                    minlength="8"
-                    maxlength="128"
-                    required
-                >
+                <!-- Contraseña -->
+                <div class="campo-contrasena">
+                    <label for="contrasena">Contraseña</label>
+                    <img src="img/icon-contrasena.png" alt="" class="icon-contrasena">
+                    <input type="password" id="contrasena" name="contrasena"
+                        placeholder="Mínimo 8 caracteres"
+                        minlength="8" maxlength="128" required />
+                </div>
 
                 <button type="submit">
                     Registrarse
@@ -63,10 +61,7 @@
 
             </form>
 
-            <p>
-                ¿Ya tienes cuenta?
-                <a href="/">Iniciar sesión</a>
-            </p>
+            <p>¿Ya tienes cuenta? <a href="/">Iniciar sesión</a></p>
 
         </div>
 
