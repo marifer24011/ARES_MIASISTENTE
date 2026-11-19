@@ -2,7 +2,7 @@
 import pymysql
 import os
 
-from fastapi import APIRouter, HTTPException, Response
+from fastapi import APIRouter, HTTPException, Response, Cookie
 from pydantic import BaseModel, EmailStr, Field
 from pwdlib import PasswordHash
 
@@ -13,7 +13,8 @@ from google.auth.transport import requests as google_requests
 
 from backend.app.security.sesiones import (
     generar_token_sesion,
-    guardar_sesion
+    guardar_sesion,
+    validar_sesion
 )
 
 router = APIRouter(prefix="/usuarios", tags=["Usuarios"])
@@ -279,6 +280,43 @@ def iniciar_sesion_google(datos: InicioSesionGoogle, response: Response):
             status_code=409,
             detail="No se pudo registrar la cuenta de Google"
         )
+
+    finally:
+        conexion.close()
+
+@router.get("/actual")
+def obtener_usuario_actual(ares_sesion: str | None = Cookie(default=None)):
+
+    id_usuario = validar_sesion(ares_sesion)
+
+    if id_usuario is None:
+        raise HTTPException(
+            status_code=401,
+            detail="No hay una sesión activa"
+        )
+
+    conexion = obtener_conexion()
+
+    try:
+        with conexion.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT id_usuario, nombre, correo
+                FROM usuarios
+                WHERE id_usuario = %s
+                """,
+                (id_usuario,)
+            )
+
+            usuario = cursor.fetchone()
+
+        if not usuario:
+            raise HTTPException(
+                status_code=404,
+                detail="Usuario no encontrado"
+            )
+
+        return {"usuario": usuario}
 
     finally:
         conexion.close()

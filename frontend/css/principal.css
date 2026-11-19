@@ -2,14 +2,13 @@
 
 * {
     box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
 }
 
 body {
     margin: 0;
-    font-family: Helvetica, sans-serif;
     color: #171344;
     background: #f7f5ff;
-
 }
 
 /* ===== ENCABEZADO ===== */
@@ -31,10 +30,20 @@ body {
     gap: 18px;
 }
 
-.logo-ares {
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.logo-tsj {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 8px 14px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo-tsj img {
+    display: block;
+    height: 44px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nombre-portal {
@@ -61,7 +70,7 @@ body {
 .menu-principal a {
     padding: 13px 18px;
     border-radius: 12px;
-    color:white;
+    color: white;
     text-decoration: none;
     font-weight: 600;
 }
@@ -108,18 +117,36 @@ body {
 
 .encabezado-asistente {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 16px;
-    padding: 22px;
-    border-bottom: 1px solid #eeeafa;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 24px 22px 20px;
+    border-bottom: 1px solid #dad2f1;
 }
 
 .icono-asistente {
-    background: #40149d;
-    color: white;
-    border-radius: 16px;
-    padding: 14px;
-    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-shrink: 0;
+    background: #e3dbf5;
+    border-radius: 50%;
+    padding: 8px 6px 0 6px;
+    width: 85px;
+    height: 85px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(64, 20, 157, 0.18);
+}
+
+.icono-asistente img {
+    display: block;
+    width: 112%;
+    height: 112%;
+    object-fit: cover;
+    transform: translateY(6px);
 }
 
 .encabezado-asistente h2 {
@@ -129,7 +156,7 @@ body {
 
 .encabezado-asistente p {
     margin: 0;
-    color: #666487;
+    color: #2e0f7f;
     font-size: 14px;
 }
 
@@ -153,8 +180,34 @@ body {
 }
 
 .mensaje.bot {
+    position: relative;
     background: #f1edff;
     border-bottom-left-radius: 5px;
+    margin-left: 48px;
+}
+
+.mensaje.bot::before {
+    content: "";
+    position: absolute;
+    left: -48px;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e3dbf5;
+    background-image: url("/img/ares-pensando.png");
+    background-size: 92%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.mensaje.bot:has(+ .mensaje.bot)::before {
+    display: none;
+}
+
+.mensaje.bot:has(+ .mensaje.bot) {
+    border-bottom-left-radius: 20px;
+    margin-bottom: 8px;
 }
 
 .mensaje.estudiante {
@@ -165,28 +218,65 @@ body {
 
 .formulario-chat {
     display: flex;
-    gap: 8px;
-    padding: 14px;
-    border-top: 1px solid #eeeafa;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 16px 18px;
+    padding: 8px 8px 8px 18px;
+    background: #f3efff; 
+    border: 2px solid #d4c4f7; 
+    border-radius: 999px; 
+    box-shadow: 0 6px 18px rgba(64, 20, 157, 0.10); 
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.formulario-chat:focus-within {
+    background-color: #ffffff;
+    border-color: #5e2bc4;
+    box-shadow: 0 8px 22px rgba(64, 20, 157, 0.18);
 }
 
 .formulario-chat input {
     flex: 1;
     min-width: 0;
-    padding: 13px;
-    border: 1px solid #ded8ed;
-    border-radius: 10px;
+    padding: 8px 4px;
+    border: none;
+    background: transparent;
+    color: #171344;  
     font-size: 14px;
+    outline: none;
+}
+
+.formulario-chat input::placeholder {
+    color: #6f6899;
 }
 
 .formulario-chat button {
-    background: #4b19ad;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    background: #c6b7e8;
+    color: #4b19ad;
     border: none;
-    border-radius: 10px;
-    padding: 0 18px;
-    font-size: 20px;
+    border-radius: 50%;
+    font-size: 17px;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(64, 20, 157, 0.30);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.formulario-chat button:hover {
+    transform: scale(1.06);
+    background: linear-gradient(135deg, #8758e3, #6633cc);
+    color: white;
+    box-shadow: 0 6px 16px rgba(120, 70, 217, 0.35);
+}
+
+.formulario-chat button:active {
+    transform: scale(0.95);
 }
 
 /* ===== CONTENIDO DERECHO ===== */
@@ -212,16 +302,6 @@ body {
     margin: 0;
     color: #666487;
     line-height: 1.5;
-}
-
-.boton-manual {
-    background: #eee5ff;
-    color: #42149c;
-    padding: 16px 20px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-weight: 600;
-    white-space: nowrap;
 }
 
 /* ===== PANELES ===== */
@@ -255,55 +335,264 @@ body {
     line-height: 1.5;
 }
 
-/* ===== TARJETA DEL TRÁMITE ===== */
-.tarjeta-tramite {
-    position: relative;
+/* ===== MANUAL DE TRÁMITES ===== */
+
+.catalogo-tramites {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
     margin-top: 50px;
-    padding: 30px 24px;
-    border-radius: 20px;
+}
+
+/* Tarjetas individuales */
+.tarjeta-manual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+
+    padding: 25px 15px;
+    min-width: 0;
+
     background: linear-gradient(135deg, #f5f0ff, #e9dcff);
-}
+    border: 1px solid #e3ddf7;
+    border-radius: 20px;
 
-.etiqueta {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #8740dc;
-    color: white;
-    padding: 9px 15px;
-    border-radius: 0 18px 0 14px;
-    font-size: 12px;
-}
-
-.icono-tramite {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-.tarjeta-tramite h3 {
     color: #170d55;
-    font-size: 21px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.tarjeta-manual:hover {
+    transform: translateY(-4px);
+    border-color: #b9a2ed;
+    box-shadow: 0 8px 20px rgba(64, 20, 157, 0.15);
+}
+
+/* Imagenes del manual */
+.tarjeta-manual img {
+    display: block;
+    width: 145px;
+    max-width: 100%;
+    height: 185px;
+    object-fit: contain;
+}
+
+/* Titulos */
+.tarjeta-manual h3 {
+    margin: 0;
+    color: #170d55;
+    font-size: 18px;
     line-height: 1.35;
 }
 
-.tarjeta-tramite p {
-    color: #615d84;
+/* Texto de consulta */
+
+.tarjeta-manual span {
+    color: #4815a5;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* VENTANA INTERACTIVA */
+
+.modal-manual {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: rgba(23, 13, 85, 0.65);
+}
+
+.modal-manual[hidden] {
+    display: none;
+}
+
+/* Contenedor de la ventana */
+.contenido-modal {
+    position: relative;
+    display: grid;
+    grid-template-areas: 240px minmax(0,1fr);
+    gap: 25px;
+
+    width: min(850px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 35px 30px;
+
+    background: white;
+    border: 1px solid #e3ddf7;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(23, 13, 85, 0.25);
+}
+
+/* Boton cerrar */
+.cerrar-manual {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    background: transparent;
+    border: none;
+    color: #4815a5;
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Imagen ampliada */
+.imagen-manual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f0ff, #e9dcff);
+    border-radius: 20px;
+}
+
+.imagen-manual img {
+    display: block;
+    width: 210px;
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+/* Informacion del tramite */
+.informacion-manual {
+    padding: 10px 5px;
+}
+
+.informacion-manual h2 {
+    margin: 0 0 15px;
+    color: #160d56;
+    font-size: 25px;
+}
+
+.informacion-manual h3 {
+    margin-top: 22px;
+    color: #170d55;
+    font-size: 18px;
+}
+
+.informacion-manual p,
+.informacion-manual li {
+    color: #666487;
+    font-size: 14px;
     line-height: 1.6;
 }
 
-.boton-tramite {
-    margin-top: 14px;
+.informacion-manual ul {
+    padding-left: 20px;
+}
+
+.informacion-manual li {
+    margin-bottom: 10px;
+}
+
+/* NAVEGACION DEL MANUAL */
+.navegacion-manual {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    padding-top: 20px;
+    border-top: 1px solid #e3ddf7;
+}
+
+.navegacion-manual button {
     padding: 13px 18px;
+
     background: #4815a5;
     color: white;
+
     border: none;
     border-radius: 10px;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
 }
 
-.boton-tramite:hover {
+.navegacion-manual button:not(:disabled) {
     background: #7130c6;
+}
+
+.navegacion-manual button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.navegacion-manual span {
+    color: #666487;
+    font-size: 13px;
+}
+
+/* Accesibilidad del manual */
+.tarjeta-manual:focus-visible,
+.cerrar-manual:focus-visible,
+.navegacion-manual button:focus-visible {
+    outline: 3px solid #8740dc;
+    outline-offset: 3px;
+}
+
+/* RESPONSIVE DEL MANUAL */
+@media (max-width: 650px) {
+
+    .contenido-modal {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 35px 18px 20px;
+    }
+
+    .imagen-manual img {
+        width: 160px;
+        max-height: 230px;
+    }
+
+    .informacion-manual h2 {
+        font-size: 22px;
+    }
+
+    .catalogo-tramites {
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .tarjeta-manual {
+        padding: 18px 10px;
+    }
+
+    .tarjeta-manual img {
+        width: 110px;
+        height: 145px;
+    }
+
+    .tarjeta-manual h3 {
+        font-size: 15px;
+    }
+
+    .navegacion-manual button {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
 }
 
 /* ===== PREGUNTAS FRECUENTES ===== */
@@ -330,6 +619,35 @@ body {
 .pregunta:hover {
     background: #f0e8ff;
     border-color: #b9a2ed;
+}
+
+
+/* Respuestas desplegables pf */
+
+.pregunta-item {
+    margin-bottom: 12px;
+}
+
+.pregunta-item summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.pregunta-item .pregunta {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.respuesta {
+    margin-top: 6px;
+    padding: 15px 20px;
+    background: #f3edff;
+    border: 1px solid #ddd4ff;
+    border-radius: 12px;
+    color: #16095b;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 /* ===== RESPONSIVE ===== */
